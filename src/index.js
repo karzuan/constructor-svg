@@ -1,12 +1,55 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './style.css';
+import Dementions from './dementions';
+import Itemradio from './itemradio';
+import Colorpart from './colorpart';
+import Imageview from './imageview';
 import * as serviceWorker from './serviceWorker';
+
+
+class Carkas extends React.Component{
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedOption: 'house1'
+    };
+  }
+
+  handleOptionChange = changeEvent => {
+    this.setState({
+      selectedOption: changeEvent.target.value
+    });
+  };
+
+
+  render() {
+  return (
+    <div className="container">
+      <div className="row">
+        <div className="col">
+          <Dementions />
+            <br/>
+          <Itemradio
+          selectedOption = {this.state.selectedOption}
+          handleOptionChange = {this.handleOptionChange}
+          />
+            <br/>
+          <Colorpart />
+        </div>
+        <div className="col">
+          <Imageview picture={this.state.selectedOption} />
+        </div>
+      </div>
+    </div>
+    );
+  }
+}
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <Carkas />
   </React.StrictMode>,
   document.getElementById('root')
 );
