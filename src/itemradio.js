@@ -9,7 +9,7 @@ class Itemradio extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <h5>Building type</h5>
+                <h5>Choose shape</h5>
                 {/* <div className="form-check">
                     <input className="form-check-input" type="radio" onChange={this.props.handleOptionChange} name="inlineRadioOptions" id="inlineRadio2" value="house2" checked={this.props.selectedOption === "house2"} />
                     <label className="form-check-label" htmlFor="inlineRadio2">Second building</label>
@@ -34,10 +34,10 @@ class Itemradio extends React.Component {
                     <input className="form-check-input" type="radio" onChange={this.props.handleOptionChange} name="inlineRadioOptions" id="inlineRadio3" value="star" checked={this.props.selectedOption === "star"} />
                     <label className="form-check-label" htmlFor="inlineRadio3">star</label>
                 </div>
-                <div className="form-check">
+                {/* <div className="form-check">
                     <input className="form-check-input" type="radio" onChange={this.props.handleOptionChange} name="inlineRadioOptions" id="inlineRadio1" value="house1" checked={this.props.selectedOption === "house1"} />
                     <label className="form-check-label" htmlFor="inlineRadio1">house</label>
-                </div>
+                </div> */}
             </React.Fragment>
         );
     }

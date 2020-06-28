@@ -15,8 +15,8 @@ class Carkas extends React.Component{
     super(props);
     this.state = {
       selectedOption: 'circle',
-      edge: 'red',
-      fill: 'purple'
+      edge: '#4caf50',
+      fill: '#ffeb3b'
     };
   }
 
@@ -26,20 +26,33 @@ class Carkas extends React.Component{
     });
   };
 
+  handleEdgeColorChange = (color) => {
+    this.setState({ edge: color.hex });
+  };
+
+  handleFillColorChange = (color) => {
+    this.setState({ fill: color.hex });
+  };
+
 
   render() {
   return (
     <div className="container">
       <div className="row">
         <div className="col">
-          <Dementions />
-            <br/>
+          {/* <Dementions />
+            <br/> */}
           <Itemradio
           selectedOption = {this.state.selectedOption}
           handleOptionChange = {this.handleOptionChange}
           />
             <br/>
-          <Colorpart />
+          <Colorpart 
+          edge={this.state.edge}
+          fill={this.state.fill}
+          handleEdgeColorChange={this.handleEdgeColorChange}
+          handleFillColorChange={this.handleFillColorChange}
+          />
         </div>
         <div className="col">
           <Imageview 

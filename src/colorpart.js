@@ -2,19 +2,33 @@ import React from 'react';
 import './style.css';
 import { CirclePicker } from 'react-color';
 
-function Colorpart(){
-    return(
-        <React.Fragment>
-            <h5>Choose color</h5>
-            <ul>
-                <li>Roof</li>
-                <li>Walls</li>
-                <li>Windows</li>
-                <li>Elements</li>
-            </ul>
-            <CirclePicker />
-        </React.Fragment>
-    );
+class Colorpart extends React.Component{
+    constructor(props) {
+        super(props);
+    }
+
+
+
+    render(){
+        return(
+            <React.Fragment>
+                <h5>Change color</h5>
+                <ul>
+                    <li>Edge</li>
+                    <CirclePicker 
+                    color={this.props.edge}
+                    onChangeComplete={ this.props.handleEdgeColorChange }
+                    />
+                    <li>Fill</li>
+                    <CirclePicker
+                    color={this.props.fill}
+                    onChangeComplete={ this.props.handleFillColorChange }
+                    />
+                </ul>
+
+            </React.Fragment>
+        );
+    }
 }
 
 export default Colorpart;
