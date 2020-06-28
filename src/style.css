@@ -31,5 +31,13 @@ code {
   width: 60%;
 }
 
+.objectPart{
+  color: blue;
+}
+.close{
+  margin-left: 15px;
+  color: red;
+}
+
 input[type='radio'] { transform: scale(1.5); }
 

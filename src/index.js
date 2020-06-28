@@ -17,6 +17,7 @@ class Carkas extends React.Component{
       selectedOption: 'circle',
       edge: '#4caf50',
       fill: '#ffeb3b'
+      // activepart: false
     };
   }
 
