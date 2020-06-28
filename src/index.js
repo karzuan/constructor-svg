@@ -7,12 +7,16 @@ import Colorpart from './colorpart';
 import Imageview from './imageview';
 import * as serviceWorker from './serviceWorker';
 
+// https://jakearchibald.github.io/ // svg converter
+
 
 class Carkas extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      selectedOption: 'house1'
+      selectedOption: 'circle',
+      edge: 'red',
+      fill: 'purple'
     };
   }
 
@@ -38,7 +42,11 @@ class Carkas extends React.Component{
           <Colorpart />
         </div>
         <div className="col">
-          <Imageview picture={this.state.selectedOption} />
+          <Imageview 
+          picture={this.state.selectedOption}
+          edge = {this.state.edge}
+          fill = {this.state.fill}
+          />
         </div>
       </div>
     </div>

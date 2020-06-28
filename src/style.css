@@ -25,3 +25,11 @@ code {
 .container {
   margin-top: 50px;
 }
+
+.graphic{
+  margin: 1em auto;
+  width: 60%;
+}
+
+input[type='radio'] { transform: scale(1.5); }
+
