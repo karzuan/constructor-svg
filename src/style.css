@@ -34,9 +34,17 @@ code {
 .objectPart{
   color: blue;
 }
+
+.box {
+  border: 3px dashed rgb(27, 27, 27);
+  margin-bottom: 12px;
+  padding: 12px;
+}
+
 .close{
   margin-left: 15px;
-  color: red;
+  color: rgb(8, 8, 8);
+  margin-bottom: auto;
 }
 
 input[type='radio'] { transform: scale(1.5); }
