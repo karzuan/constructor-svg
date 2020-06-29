@@ -40,7 +40,7 @@ class Carkas extends React.Component{
   return (
     <div className="container">
       <div className="row">
-        <div className="col">
+        <div className="col-sm-12 col-md-6">
           {/* <Dementions />
             <br/> */}
           <Itemradio
@@ -55,7 +55,7 @@ class Carkas extends React.Component{
           handleFillColorChange={this.handleFillColorChange}
           />
         </div>
-        <div className="col">
+        <div className="col-sm-12 col-md-6 order-first order-sm-last">
           <Imageview 
           picture={this.state.selectedOption}
           edge = {this.state.edge}

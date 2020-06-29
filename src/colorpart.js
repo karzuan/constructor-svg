@@ -28,8 +28,6 @@ class Colorpart extends React.Component {
         return (
             <React.Fragment>
                 <h5>Change color</h5>
-                <div className='row'>
-                    <div className="col-8">
                         <ul>
                             <li ><p className="objectPart" onClick={() => this.handleClick('edge')} >Edge</p></li>
                                 {/*
@@ -46,12 +44,6 @@ class Colorpart extends React.Component {
                             onChangeComplete={this.props.handleFillColorChange}
                         /><span className="close" onClick={() => this.handleClick('fill')} > <img src={xb} alt="close" /></span></div>}
                         </ul>
-                    </div>
-                    <div className="col-4">
-                    
-
-                    </div>
-                </div>
             </React.Fragment>
         );
     }
